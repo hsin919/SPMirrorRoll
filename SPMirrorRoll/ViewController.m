@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface ViewController ()
 
@@ -26,4 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)meanCrash:(id)sender {
+    [CrashlyticsKit crash];
+}
 @end
