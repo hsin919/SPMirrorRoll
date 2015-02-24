@@ -14,6 +14,8 @@
 		D9B228561A8998A5003B6A4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B228551A8998A5003B6A4C /* Images.xcassets */; };
 		D9B228591A8998A5003B6A4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9B228571A8998A5003B6A4C /* LaunchScreen.xib */; };
 		D9B228651A8998A5003B6A4C /* SPMirrorRollTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B228641A8998A5003B6A4C /* SPMirrorRollTests.m */; };
+		D9E113531A9C4BC700634BE9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E113511A9C4BC700634BE9 /* Crashlytics.framework */; };
+		D9E113541A9C4BC700634BE9 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9E113521A9C4BC700634BE9 /* Fabric.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		D9B2285E1A8998A5003B6A4C /* SPMirrorRollTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SPMirrorRollTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B228631A8998A5003B6A4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B228641A8998A5003B6A4C /* SPMirrorRollTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPMirrorRollTests.m; sourceTree = "<group>"; };
+		D9E113511A9C4BC700634BE9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		D9E113521A9C4BC700634BE9 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9E113531A9C4BC700634BE9 /* Crashlytics.framework in Frameworks */,
+				D9E113541A9C4BC700634BE9 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		D9B2283C1A8998A4003B6A4C = {
 			isa = PBXGroup;
 			children = (
+				D9E113511A9C4BC700634BE9 /* Crashlytics.framework */,
+				D9E113521A9C4BC700634BE9 /* Fabric.framework */,
 				D9B228471A8998A5003B6A4C /* SPMirrorRoll */,
 				D9B228611A8998A5003B6A4C /* SPMirrorRollTests */,
 				D9B228461A8998A5003B6A4C /* Products */,
@@ -129,6 +137,7 @@
 				D9B228411A8998A5003B6A4C /* Sources */,
 				D9B228421A8998A5003B6A4C /* Frameworks */,
 				D9B228431A8998A5003B6A4C /* Resources */,
+				D9E113501A9C4B9700634BE9 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -214,6 +223,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D9E113501A9C4B9700634BE9 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run ce16ed3aa0b06e1dba0871e666779548b749baf6 cc71864a07312494f5f20e7b5e746fc7f6e025d68488025d20518593bbabc898";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9B228411A8998A5003B6A4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -297,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -333,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -345,9 +371,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SPMirrorRoll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f1f0ca56-cc98-40b2-a1ee-a242266ec67a";
 			};
 			name = Debug;
 		};
@@ -355,9 +386,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SPMirrorRoll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "f1f0ca56-cc98-40b2-a1ee-a242266ec67a";
 			};
 			name = Release;
 		};
@@ -414,6 +450,7 @@
 				D9B2286A1A8998A5003B6A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D9B2286B1A8998A5003B6A4C /* Build configuration list for PBXNativeTarget "SPMirrorRollTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +459,7 @@
 				D9B2286D1A8998A5003B6A4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
