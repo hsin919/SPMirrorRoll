@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *versionLabel;
 - (IBAction)meanCrash:(id)sender;
+- (IBAction)outIndex:(id)sender;
 
 @end
 

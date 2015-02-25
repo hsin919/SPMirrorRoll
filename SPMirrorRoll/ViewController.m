@@ -28,6 +28,12 @@
 }
 
 - (IBAction)meanCrash:(id)sender {
-    [CrashlyticsKit crash];
+    //[CrashlyticsKit crash];
+}
+
+- (IBAction)outIndex:(id)sender {
+    NSArray *testArray = [[NSArray alloc] init];
+    NSString *crashStr = [testArray objectAtIndex:0];
+    NSLog(@"%@", crashStr);
 }
 @end
