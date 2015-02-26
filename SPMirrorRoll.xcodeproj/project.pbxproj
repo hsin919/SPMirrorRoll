@@ -408,7 +408,7 @@
 				INFOPLIST_FILE = SPMirrorRoll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6137d50d-f85f-4ee1-8eb7-7ff617df6edd";
+				PROVISIONING_PROFILE = "ed6728d7-9e9c-475b-996a-3c84ef9a7032";
 			};
 			name = Debug;
 		};
@@ -423,7 +423,7 @@
 				INFOPLIST_FILE = SPMirrorRoll/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6137d50d-f85f-4ee1-8eb7-7ff617df6edd";
+				PROVISIONING_PROFILE = "ed6728d7-9e9c-475b-996a-3c84ef9a7032";
 			};
 			name = Release;
 		};
