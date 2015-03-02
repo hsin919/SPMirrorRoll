@@ -32,9 +32,10 @@
 }
 
 - (IBAction)outIndex:(id)sender {
+    
     NSArray *testArray = [[NSArray alloc] init];
     NSString *crashStr = [testArray objectAtIndex:0];
-    
+
     NSLog(@"object number of testArray is %lu", (unsigned long)[testArray count]);
     NSLog(@"%@", crashStr);
     
