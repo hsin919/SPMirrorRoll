@@ -25,11 +25,10 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)meanCrash:(id)sender {
-    [CrashlyticsKit crash];
+    //[CrashlyticsKit crash];
 }
 
 - (IBAction)outIndex:(id)sender {
