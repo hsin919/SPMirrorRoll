@@ -20,6 +20,7 @@
     NSDictionary* infoDict = [[NSBundle mainBundle] infoDictionary];
     NSString* version = [infoDict objectForKey:@"CFBundleShortVersionString"];
     self.versionLabel.text = version;
+    
 }
 
 - (void)didReceiveMemoryWarning {
