@@ -28,7 +28,7 @@
 }
 
 - (IBAction)meanCrash:(id)sender {
-    [CrashlyticsKit crash];
+    //[CrashlyticsKit crash];
 }
 
 - (IBAction)outIndex:(id)sender {
